@@ -6,10 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LoveCalculate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Noto+Sans+Mono:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+    <main>
 
+        <div class="container">
+            <div class="main">
+                <h1>Love Calculator</h1>
+                <p>
+                    Проверь!!!
+                </p>
+                <p>насколько ты совместим со второй половинкой</p>
+                <p>напишите ваши имена</p>
+                <input type="text" name="first_name">
+                <input type="text" name="last_name"><br>
+                <button onclick="myFunction()">Проверить</button>
+                <h2 class="this"></h2>
+                <div class="gradient"></div>
+            </div>
+        </div>
+    </main>
+    <script>
+        var lovScore = Math.random() * 100;
+        lovScore = Math.floor(lovScore) + 1;
+        function myFunction() {
+            if (lovScore > 70) {
+                document.querySelector(".this").innerHTML = `${lovScore} % <br>
+                горячая любовь`;
+            } else {
+                document.querySelector(".this").innerHTML = lovScore + "%";
+            }
+        }
+
+    </script>
 </body>
 
 </html>
